@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato - Atividade 4</title>
+    <style>
+      
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .instrucoes { padding: 10px; background-color: #f0f8ff; border: 1px solid #cceeff; margin-bottom: 20px; }
+        form { max-width: 500px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; background-color: #f9f9f9; }
+        div { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button { background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <p>
+        <a href="3_tabela_uf.html">&larr; Voltar para a Tabela de Estados</a>
+        </p>
+
+    <h1>Entre em Contato</h1>
+    
+    <div class="instrucoes">
+        <p><strong>Instruções:</strong> Por favor, preencha todos os campos obrigatórios (marcados com *) para enviar sua mensagem. Entraremos em contato o mais breve possível.</p>
+    </div>
+
+    <form action="#" method="POST">
+        
+        <div>
+            <label for="nome">Nome *</label>
+            <input 
+                type="text" 
+                id="nome" 
+                name="nome" 
+                placeholder="Seu nome completo" 
+                required> </div>
+
+        <div>
+            <label for="email">E-mail *</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="exemplo@dominio.com" 
+                required> </div>
+
+        <div>
+            <label for="assunto">Assunto</label>
+            <input 
+                type="text" 
+                id="assunto" 
+                name="assunto" 
+                placeholder="Dúvida, sugestão ou elogio"
+                >
+        </div>
+
+        <div>
+            <label for="estado">Selecione seu Estado</label>
+            <select id="estado" name="estado">
+                <option value="" disabled selected>--- Selecione um Estado ---</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="PR">Paraná</option>
+                </select>
+        </div>
+
+        <div>
+            <label for="mensagem">Mensagem</label>
+            <textarea 
+                id="mensagem" 
+                name="mensagem" 
+                rows="5" 
+                placeholder="Digite sua mensagem aqui..."></textarea>
+        </div>
+
+        <div>
+            <button type="submit">Enviar Mensagem</button>
+        </div>
+
+    </form>
+
+</body>
+</html>
