@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 - O que é HTTP?</title>
+    <style>
+      
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; }
+        h3 { color: navy; }
+        pre { background-color: #eee; padding: 10px; border: 1px solid #ccc; overflow-x: auto; }
+        ul { list-style-type: disc; margin-left: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>O Protocolo HTTP: A Conversa da Web</h1>
+    </header>
+
+    <section id="o-que-e">
+        <h3>1. O que é o Protocolo HTTP?</h3>
+        <p><strong>HTTP</strong> (HyperText Transfer Protocol) é o conjunto de regras que permite que computadores (clientes) e servidores "conversem" na internet.</p>
+        <p>Ele funciona como um **carteiro** da web. Seu trabalho é entregar uma mensagem de **Requisição** (pedido) do seu navegador ao servidor e trazer de volta uma **Resposta** (o site, a foto, ou a informação que você pediu).</p>
+        <p>Essa conversa acontece sempre no modelo **Cliente-Servidor** (seu navegador pedindo algo ao computador que armazena o site).</p>
+        <p>💡 <strong>Lembrete:</strong> A versão segura é o **HTTPS**, que usa criptografia (um "cadeado") para proteger informações importantes, como senhas.</p>
+    </section>
+
+    <hr>
+
+    <section id="como-funciona">
+        <h3>2. Como é Usado na WEB (Requisição e Resposta)</h3>
+        <p>O processo é simples: você clica em um link ou digita um endereço, e seu navegador envia uma **Requisição HTTP**. O servidor processa e envia uma **Resposta HTTP**.</p>
+        
+        <h4>Exemplo de Requisição (O Cliente Pede)</h4>
+        <p>O seu navegador está pedindo a página inicial (`/`) do site `www.exemplo.com.br`:</p>
+        <pre><code>
+GET / HTTP/1.1
+Host: www.exemplo.com.br
+User-Agent: Mozilla/5.0 (O meu navegador)
+        </code></pre>
+        <ul>
+            <li><strong>Método (`GET`):</strong> Diz ao servidor que queremos **BUSCAR/LER** dados.</li>
+            <li><strong>URI (`/`):</strong> O caminho (a página) que queremos no site.</li>
+            <li><strong>Host:</strong> O nome do site que estamos acessando.</li>
+            <li><strong>User-Agent:</strong> Diz ao servidor qual é o nosso navegador (para que ele possa enviar a versão correta do conteúdo).</li>
+        </ul>
+
+        <h4>Exemplo de Resposta (O Servidor Entrega)</h4>
+        <p>O servidor envia a página de volta, indicando que deu tudo certo:</p>
+        <pre><code>
+HTTP/1.1 200 OK
+Content-Type: text/html;
+Content-Length: 1500
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+... (O código da página)
+&lt;/html&gt;
+        </code></pre>
+        <ul>
+            <li><strong>Código de Status (`200 OK`):</strong> Indica que o pedido foi **BEM-SUCEDIDO**. (Outros comuns: `404 Not Found`, `302 Redirecionado`).</li>
+            <li><strong>Content-Type:</strong> Diz ao navegador que o que está sendo enviado é um arquivo HTML (e não uma imagem ou um vídeo).</li>
+            <li><strong>Corpo da Mensagem:</strong> É onde está o conteúdo que você realmente queria (o código HTML da página).</li>
+        </ul>
+
+        <h4>Ilustração</h4>
+        <p></p>
+        <p>O protocolo HTTP garante que essas mensagens sejam entregues e entendidas por ambos os lados, permitindo que a web funcione.</p>
+    </section>
+
+</body>
+</html>
